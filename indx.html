@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二十四节气</title>
+  <style>
+    /* 简单重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "SimSun", "宋体", serif;
+      color: #333;
+    }
+
+    /* 顶部大背景图 */
+    .bg {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url("./png/all.png") center center / cover no-repeat;
+      color: #000000;
+    }
+
+    h1 {
+      font-size: 32px;
+      letter-spacing: 8px;
+      margin-bottom: 14px;
+    }
+
+    .sub {
+      font-size: 16px;
+      letter-spacing: 4px;
+      margin-bottom: 14px;
+    }
+
+    .desc {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    /* 导航 */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background: #2c2a24;
+      padding: 14px 0;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      letter-spacing: 6px;
+      padding: 8px 28px;
+      margin: 0 10px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .nav a:hover {
+      background: #a63a2a;
+    }
+
+    /* 四季模块 */
+    .season {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e0d4;
+    }
+
+    .season:nth-child(odd) {
+      background: #f7f3ea;
+    }
+
+    /* 标题背景图块 */
+    .title-bg {
+      width: 320px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* 四季背景图路径 */
+    .title-bg.spring { background-image: url("./png/spring.png"); }
+    .title-bg.summer { background-image: url("./png/summer.png"); }
+    .title-bg.autumn { background-image: url("./png/autumn.png"); }
+    .title-bg.winter { background-image: url("./png/winter.png"); }
+
+    /* 大标题 */
+    .season h2 {
+      font-size: 36px;
+      letter-spacing: 12px;
+      margin-bottom: 6px;
+      color: #000000a1;
+    }
+
+    /* 小标题 */
+    .season .en {
+      font-size: 12px;
+      letter-spacing: 6px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    /* 小标题装饰 */
+    .season .divider {
+      width: 60px;
+      height: 2px;
+      background: #a63a2a;
+      margin: 24px auto 0;
+    }
+
+    /* 内容规划 */
+    .season h3 {
+      font-size: 20px;
+      letter-spacing: 4px;
+      margin: 26px 0 12px;
+      color: #333;
+    }
+
+    .season p {
+      font-size: 15px;
+      line-height: 2;
+      color: #555;
+      max-width: 640px;
+    }
+
+    .season ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .season li {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .season img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 标题大 -->
+  <div class="bg">
+    <h1>二十四节气</h1>
+    <p class="sub">四时有序 · 万物有时</p>
+    <p class="desc">古人观天察地的历法智慧，一年分二十四节，标记万物生息</p>
+  </div>
+
+  <!-- 导航 -->
+  <nav class="nav">
+    <a href="#spring">春</a>
+    <a href="#summer">夏</a>
+    <a href="#autumn">秋</a>
+    <a href="#winter">冬</a>
+  </nav>
+
+  <!-- 春 -->
+  <section id="spring" class="season">
+    <div class="title-bg spring">
+      <h2>春</h2>
+      <p class="en">SPRING · 万物复苏</p>
+    </div>
+    <!-- 分隔线（想要就在标题后加这一行） -->
+    <div class="divider"></div>
+    <!-- 你的内容从这里开始 -->
+     <h3>立春(每年 2 月 3—5 日交节)</h3>
+     <p>立春为二十四节气之首，"立，建始也"，春季自此开始。此时东风解冻，草木萌动，阳气升发。三候为：一候东风解冻，二候蛰虫始振，三候鱼陟负冰。民间有 "咬春" 之俗，吃春饼、萝卜迎春纳新；又有 "打春牛" 祈愿五谷丰登、贴春字迎气。谚语云 "立春阳气生，草木发新根"，河北民谚更有 "宁舍一碗金，不舍一日春"，足见其农时之重。</p><hr>
+     <h3>雨水(每年 2 月 18—20 日交节)</h3>
+     <p>此时气温回升、冰雪融化、降水渐增。"天一生水"，雨水滋润万物萌发。三候为：一候獭祭鱼，二候鸿雁来，三候草木萌动。此时春旱几率仍较高，故有 "春雨贵如油" 之说。习俗有回娘屋（女婿拜望岳父母）、占稻色（爆糯谷看花色占当年稻谷收成）、接寿等。</p>
+     <h3>惊蛰(每年 3 月 5—7 日交节)</h3>
+     <p>惊蛰古称 "启蛰"，意为天气回暖、春雷始鸣，惊醒蛰伏于地下冬眠的昆虫。三候为：一候桃始华，二候仓庚鸣，三候鹰化为鸠。此时乍寒乍暖，气温变化大。习俗有祭白虎、打小人、吃梨（寓意远离虫害、润肺）。农谚云 "惊蛰雷雨大，谷米无高价"" 雷打惊蛰后，低田好种豆 "。</p>
+     <h3>春分(每年 3 月 20—22 日交节)</h3>
+     <p>春分日太阳直射赤道，昼夜平分、寒暑相半，是商代以前就被确立的古老节气，也是重要农事节气。三候为：一候玄鸟至，二候雷乃发声，三候始电。古代皇帝于此日到日坛祭祀太阳神，北京朝阳区至今仍有春分祭日民俗。民间习俗有竖蛋、吃春菜、放风筝。</p>
+     <h3>清明(每年 4 月 4—6 日交节)</h3>
+     <p>《月令七十二候集解》云："物至此时，皆以洁齐而清明矣。" 此时气清景明、万物洁净。三候为：一候桐始华，二候田鼠化为鴽，三候虹始见。清明融合寒食节、上巳节习俗，形成扫墓祭祖、踏青、插柳、放风筝、吃青团等传统，既寄托追思，也蕴含天人合一的生命哲学。农谚 "清明前后，种瓜点豆"。</p>
+     <h3>谷雨(每年 4 月 19—21 日交节)</h3>
+     <p>谷雨是春季最后一个节气，"雨生百谷"，此时天气温和、雨水明显增多，最利于谷类作物生长。三候为：一候萍始生，二候鸣鸠拂其羽，三候戴胜降于桑。习俗有祭仓颉、喝谷雨茶、赏牡丹、食香椿，是春茶与春花最盛的时节。</p>
+  </section>
+
+  <!-- 夏 -->
+  <section id="summer" class="season">
+    <div class="title-bg summer">
+      <h2>夏</h2>
+      <p class="en">SUMMER · 万物繁盛</p>
+    </div>
+    <div class="divider"></div>
+    <h3>立夏(每年 5 月 5—7 日交节)</h3>
+    <p>立夏为夏季开始，万物由生转长，呈现勃勃生机。三候为：一候蝼蝈鸣，二候蚯蚓出，三候王瓜生。杭州等地有立夏吃乌米饭、登高的习俗。民间常 "尝新" 吃时令鲜蔬，还有称人、吃立夏蛋、挂蛋兜之俗。湖北民谚 "立夏到小满，亲家来了都不管"，足见农事之繁忙。</p>
+    <h3>小满(每年 5 月 20—22 日交节)</h3>
+    <p>《月令七十二候集解》："物至于此小得盈满。" 此时麦类等夏熟作物籽粒渐满而未成熟，是农田管理的关键期。三候为：一候苦菜秀，二候靡草死，三候麦秋至。习俗有祭车神、抢水灌溉、食苦菜（尝苦消暑）。</p>
+    <h3>芒种(每年 6 月 5—7 日交节)</h3>
+    <p>芒种意为 "有芒之谷可稼种"，此时长江中下游进入丰水期，夏收夏种同时进行，农谚 "春争日，夏争时"，"争时" 即指这一时节的收种农忙。三候为：一候螳螂生，二候鵙始鸣，三候反舌无声。习俗有送花神、安苗祭祀、煮梅、打泥巴仗。</p>
+    <h3>夏至(每年 6 月 21—22 日交节)</h3>
+    <p>夏至日北半球白昼最长，南方各地日出到日没多约 14 小时，此后白昼渐短，故有 "吃过夏至面，一天短一线" 之说。三候为：一候鹿角解，二候蜩始鸣，三候半夏生。习俗有祭神祀祖、吃夏至面（凉面为主）、消夏避伏，"冬至饺子夏至面" 流传至今。</p>
+    <h3>小暑(每年 7 月 6—8 日交节)</h3>
+    <p>小暑为农历六月节，正值初伏前后，"暑，热也，就热之中分为大小"，小暑即小热。三候为：一候温风至，二候蟋蟀居宇，三候鹰始鸷。习俗有食新米、吃藕、晒伏（晒衣物书籍防霉）、赏荷。江南谚语 "小暑吹了东南风，四十五日拔草风"，认为小暑东南风是干旱的预兆。</p>
+    <h3>大暑(每年 7 月 22—24 日交节)</h3>
+    <p>大暑正值中伏前后，是一年中最热的时期，农作物生长最快，大部分地区旱、涝、风灾也最频繁。三候为：一候腐草为萤，二候土润溽暑，三候大雨时行。习俗有喝伏茶、吃仙草 / 西瓜 / 绿豆汤、烧伏香、送 "大暑船"。农谚 "大暑不割禾，一天少一箩"。</p>
+  </section>
+
+  <!-- 秋 -->
+  <section id="autumn" class="season">
+    <div class="title-bg autumn">
+      <h2>秋</h2>
+      <p class="en">AUTUMN · 禾谷成熟</p>
+    </div>
+    <div class="divider"></div>
+    <h3>立秋(每年 8 月 7—9 日交节)</h3>
+    <p>立秋表示秋天开始，《逸周书・时训解》记其物候 "立秋之日凉风至"，继之 "白露降"" 寒蝉鸣 "。三候为：一候凉风至，二候白露降，三候寒蝉鸣。习俗有啃秋（吃西瓜、香瓜）、贴秋膘（吃肉食进补）、晒秋。民谚" 早晨立了秋，晚上凉飕飕 "。</p>
+    <h3>处暑(每年 8 月 22—24 日交节)</h3>
+    <p>《月令七十二候集解》："处，止也，暑气至此而止矣。" 此后昼夜温差加大，庄稼成熟加快。三候为：一候鹰乃祭鸟，二候天地始肃，三候禾乃登。习俗有出游迎秋、开渔节、吃鸭子（滋阴润燥）、放河灯。农谚 "处暑禾田连夜变"。</p>
+    <h3>白露(每年 9 月 7—9 日交节)</h3>
+    <p>白露时节露凝而白、天气转凉，古代黄河流域物候为鸿雁南飞、燕子南归。三候为：一候鸿雁来，二候玄鸟归，三候群鸟养羞。习俗有收清露、饮白露茶 / 米酒、吃龙眼、祭禹王。谚语 "白露秋分夜，一夜凉一夜"" 一场秋风一场凉，一场白露一场霜 "</p>
+    <h3>秋分(每年 9 月 22—24 日交节)</h3>
+    <p>《春秋繁露》："秋分者，阴阳相半也，故昼夜均而寒暑平。" 秋分时节人们忙于秋收、秋耕、秋种，所谓 "三秋大忙"。三候为：一候雷始收声，二候蛰虫坯户，三候水始涸。习俗有祭月、竖蛋、吃秋菜、送秋牛图；自 2018 年起，秋分设立为 "中国农民丰收节"。</p>
+    <h3>寒露(每年 10 月 8—9 日交节)</h3>
+    <p>《月令七十二候集解》："九月节，露气寒冷，将凝结也。" 寒露标志性物候是金菊盛开，此时棉花成熟，人们趁晴采摘，农谚 "寒露不摘棉，霜打莫怨天"。三候为：一候鸿雁来宾，二候雀入大水为蛤，三候菊有黄华。习俗有赏菊、登高、吃芝麻（滋阴防燥）、饮菊花酒。</p>
+    <h3>霜降(每年 10 月 23—24 日交节)</h3>
+    <p>《月令七十二候集解》："气肃而凝，露结为霜矣。"" 霜降始霜 "反映黄河流域气候，就全国多数地区而言，霜降是寒气到来的日子。三候为：一候豺乃祭兽，二候草木黄落，三候蛰虫咸俯。习俗有赏红叶、吃柿子（寓意事事如意）、进补秋膘。民谚" 霜降霜降，移花进房 "</p>
+  </section>
+
+  <!-- 冬 -->
+  <section id="winter" class="season">
+    <div class="title-bg winter">
+      <h2>冬</h2>
+      <p class="en">WINTER · 万物收藏</p>
+    </div>
+    <div class="divider"></div>
+    <h3>立冬(每年 11 月 7—8 日交节)</h3>
+    <p>《月令七十二候集解》："冬，终也，万物收藏也。" 立冬为冬季开始，万物进入收藏休养。三候为：一候水始冰，二候地始冻，三候雉入大水为蜃。习俗有迎冬祭神、吃饺子 / 羊肉汤、补冬、酿黄酒。旧时农俗立冬观察风向可预知来年丰歉，谚云 "立冬西北风，来年五谷丰"。</p>
+    <h3>小雪(每年 11 月 22—23 日交节)</h3>
+    <p>《月令七十二候集解》："雨下而为寒气所薄，故凝而为雪。小者，未盛之辞。" 此时天气渐冷，黄河中下游始降小雪。三候为：一候虹藏不见，二候天气上升地气下降，三候闭塞而成冬。习俗有腌菜（腌萝卜、雪里蕻）、晒鱼干、吃糍粑、酿酒。谚语 "小雪雪满天，来年是丰年"。</p>
+    <h3>大雪(每年 12 月 6—8 日交节)</h3>
+    <p>《月令七十二候集解》："至此而雪盛矣。" 大雪时天气更冷，降雪可能性和雪量都比小雪更大。三候为：一候鹖鴠不鸣，二候虎始交，三候荔挺出。习俗有赏雪玩雪、腌腊肉（灌香肠）、喝红薯粥。民谚 "小雪不见雪，大雪满天飞"。</p>
+    <h3>冬至(每年 12 月 21—23 日交节)</h3>
+    <p>冬至日北半球白昼最短、黑夜最长，此后阳气初生。在传统社会，冬至是要加以庆祝纪念的，地位如年节，浙江等地至今称 "冬至节"。三候为：一候蚯蚓结，二候麋角解，三候水泉动。习俗有祭祖拜神、北方吃饺子、南方吃汤圆、数九（自冬至起九九八十一天）与消寒会。</p>
+    <h3>小寒(每年 1 月 5—7 日交节)</h3>
+    <p>俗话说 "冷在三九"，"三九" 多在小寒期间，是一年中最冷的时段。三候为：一候雁北乡，二候鹊始巢，三候雉始雊。习俗有吃腊八粥、探梅、冰戏、备年货，年味自此渐浓。</p>
+    <h3>大寒(每年 1 月 20—21 日交节)</h3>
+    <p>此时为一年四季最寒冷之时，寒气之极，故曰大寒。三候为：一候鸡始乳，二候征鸟厉疾，三候水泽腹坚。古代腊日就在这一时节，击腊鼓驱寒气、唤阳春。习俗有尾牙祭、扫尘迎年（"尘" 谐 "陈"，除旧迎新）、吃八宝饭、贴年红，准备除夕守岁。民谚 "小寒冻土，大寒冻河"</p>
+  </section>
+
+</body>
+</html>
